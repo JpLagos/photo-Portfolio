@@ -5,7 +5,7 @@ function cn(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function BlurImage({ image }: { image: Image }) {
+export default function BlurImage({ image }: { image: typeof Image }) {
   const [isLoading, setLoading] = useState(true);
   return (
     <a href={image.href} className="group">
