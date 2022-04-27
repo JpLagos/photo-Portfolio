@@ -13,7 +13,7 @@ const Contact = () => {
    )
 
 
-  const sendData = async (event) => {
+  const sendData = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
 
     const formInputs = document.querySelectorAll('input, textarea')
