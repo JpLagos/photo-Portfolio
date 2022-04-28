@@ -15,12 +15,12 @@ const Contact = () => {
     event.preventDefault()
 
     const formInputs = document.querySelectorAll('input, textarea')
-    let submision= {}
 
+    let submision : {[key:string]: string} = {};
     formInputs.forEach(element => {
       const { value, name } = element as HTMLInputElement
       if (value) {
-        submision[name as keyof string] = value
+        submision[name] = value
         
       }
     })
