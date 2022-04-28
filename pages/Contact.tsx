@@ -13,9 +13,8 @@ const Contact = () => {
    )
   const sendData = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
-
     const formInputs = document.querySelectorAll('input, textarea')
-
+    
     let submision : {[key:string]: string} = {};
     formInputs.forEach(element => {
       const { value, name } = element as HTMLInputElement
@@ -25,7 +24,6 @@ const Contact = () => {
       }
     })
     const { error } = await supabase.from('entries').insert([submision], {returning: 'minimal'})
-    formInputs.forEach(element => element.value = '')
     if (error) {
       alert('There was an error please, fill all the form and try again.')
   } else {
