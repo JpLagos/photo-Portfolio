@@ -11,8 +11,6 @@ const Contact = () => {
     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
     process.env.NEXT_PUBLIC_SERVICE_KEY || ''  
    )
-
-
   const sendData = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
 
@@ -20,9 +18,10 @@ const Contact = () => {
     let submision= {}
 
     formInputs.forEach(element => {
-      const { value, name } = element
+      const { value, name } = element as HTMLInputElement
       if (value) {
-          submision[name] = value
+        submision[name] = value
+        
       }
     })
     const { error } = await supabase.from('entries').insert([submision], {returning: 'minimal'})
