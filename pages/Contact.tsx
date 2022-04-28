@@ -20,7 +20,7 @@ const Contact = () => {
     formInputs.forEach(element => {
       const { value, name } = element as HTMLInputElement
       if (value) {
-        submision[name] = value
+        submision[name as keyof string] = value
         
       }
     })
