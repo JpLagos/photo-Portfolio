@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div className='w-3/4 flex flex-col justify-center align-center mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8'>
       <h1 className="text-6xl mb-16 text-center">Contact</h1>
-<form onSubmit={sendData} id="contact-form" className="w-full max-w-lg self-center">
+<form onSubmit={()=>sendData} id="contact-form" className="w-full max-w-lg self-center">
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
