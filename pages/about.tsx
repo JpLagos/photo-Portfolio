@@ -19,7 +19,7 @@ const about = () => {
           width="500px"
           height="450px"
           className={cn(
-            'group-hover:opacity-75 duration-700 ease-in-out',
+            'rounded group-hover:opacity-75 duration-700 ease-in-out',
             isLoading
               ? 'grayscale blur-2xl scale-110'
               : 'grayscale-0 blur-0 scale-100'
